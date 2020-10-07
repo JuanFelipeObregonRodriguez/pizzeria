@@ -1,0 +1,226 @@
+/* Main Menu */
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    padding: 0 30px;
+    margin-top: 10px;
+    background-color: var(--background-color);
+    z-index: 1;
+}
+
+.logo img {
+    width: 130px;
+    cursor: pointer;
+}
+
+.menu-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu-bar .links ul li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.menu-bar .links ul li a {
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    background: linear-gradient(currentColor, currentColor);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: all 0.5s;
+}
+
+.menu-bar .links ul li a:hover {
+    color: var(--secundary-color);
+    background-size: 50% 2px;
+}
+
+.menu-bar .social a {
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.5s;
+}
+
+.menu-bar .social a:hover {
+    color: var(--secundary-color);
+} 
+
+.main-menu i {
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 30px;
+    float: right;
+    display: none;
+    transition: all 0.5s;
+}
+
+.main-menu i:hover {
+    color: var(--secundary-color);
+}
+
+/* Footer Section */
+footer {
+    display: flex;
+    margin-top: -100px;
+}
+
+.social-method {
+    width: 25%;
+    height: 100px;
+    background: #333333;
+    color: #ffffff;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.social-method i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    line-height: 100px;
+    transition: all 0.5s;
+}
+
+.social-method span {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 10px 0;
+    font-size: 12px;
+    background: var(--primary-color);
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transform: translateY(60px);
+    transition: all 0.5s;
+}
+
+.social-method i:hover + span {
+    transform: translateY(0px);
+}
+
+.social-method i:hover {
+    transform: translateY(-20px);
+}
+
+/* Go up Button */
+#btn-top {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+    transform: translateY(200%);
+    transition: all 0.5s;
+}
+
+#btn-top.show {
+    transform: translateY(0);
+}
+
+#btn-top.finalscroll {
+    transform: translateY(-230%);
+}
+
+#btn-top span {
+    color: #ffffff;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.5s;
+}
+
+#btn-top:hover {
+    background: #d89127;
+}
+
+#btn-top:hover span {
+    transform: translateY(-3px);
+}
+
+
+@media screen and (max-width: 650px) {
+    .main-menu {
+        position: fixed;
+        top: 0;
+        margin-top: 0;
+    }
+
+    .main-menu i {
+        display: block;
+    }
+
+    .menu-bar {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+        background-color: #333333;
+        transition: all 1s;
+        transform: translateX(100%);
+    }
+
+    .menu-bar.active {
+        transform: translateX(0%);
+    }
+
+    .menu-bar i {
+        position: absolute;
+        right: 50px;
+        top: 50px;
+    }
+
+    .menu-bar .links ul li {
+        display: block;
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .menu-bar .links ul li a,
+    .menu-bar .social a {
+        font-size: 20px;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        margin-top: 0px;
+    }
+
+    .social-method {
+        width: 50%;
+    }
+
+    #btn-top {
+        display: none;
+    }
+} 
+
+

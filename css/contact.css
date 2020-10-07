@@ -1,0 +1,178 @@
+/* Contact Section */
+#contact {
+    height: 100vh;
+    padding: 60px;
+    position: relative;
+}
+
+#form {
+    width: 70%;
+    margin: 50px auto;
+}
+
+.two-fields {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-text, .input-email, .textarea {
+    border: 1px solid #b4b4b4;
+    color: #888888;
+    background: #ffffff;
+    outline: none;
+    padding: 15px 60px;
+    height: 45px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+}
+
+.textarea {
+    width: 100%;
+    height: 150px;
+    resize: none;
+}
+
+.input-text, .input-email {
+    width: 100%;
+}
+
+.input-icon {
+    position: relative;
+    width: 48%;
+}
+
+.input-icon i {
+    position: absolute;
+    left: 0;
+    padding: 14px 15px;
+    background: #888888;
+    color: #ffffff;
+    transition: all 0.5s;
+}
+
+.textarea-icon {
+    width: 100%;
+}
+
+.textarea-icon i {
+    background: transparent;
+    color: #888888;
+    padding: 0;
+    font-size: 25px;
+    left: 17px;
+    top: 13px;
+    transition: all 0.5s;
+}
+
+.input-icon input:focus,
+.input-icon textarea:focus {
+    border: 1px solid var(--primary-color);
+}
+
+.input-icon input:focus + i {
+    background: var(--primary-color);
+}
+
+.input-icon textarea:focus + i {
+    color: var(--primary-color);
+}
+
+.fields-btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-input {
+    padding: 15px 50px;
+}
+
+.btn-input:hover {
+    padding: 15px 65px;
+}
+
+/* Alerts */
+.alerts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert {
+    width: 60%;
+    padding: 20px 60px;
+    position: fixed;
+    top: 0;
+    transition: all 0.5s;
+}
+
+.alert.show {
+    transform: translateY(50%);
+}
+
+.alert.hide {
+    transform: translateY(-100%);
+}
+
+.alert .icono-alert {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+}
+
+.alert .msg {
+    padding: 0 20px;
+    font-size: 18px;
+}
+
+#alertError {
+    background: #f8d7da;
+    border-right: 4px solid #da3748;
+}
+
+#alertError .icono-alert {
+    color: #da3748;
+}
+
+#alertError .msg {
+    color: #721c24;
+}
+
+#alertSuccess {
+    background: #d4edda;
+    border-right: 4px solid #279e43;
+}
+
+#alertSuccess .icono-alert {
+    color: #279e43;
+}
+
+#alertSuccess .msg {
+    color: #155724;
+}
+
+
+@media screen and (max-width: 650px) {
+    #form {
+        width: 100%;
+    }
+
+    .two-fields {
+        flex-direction: column;
+    }
+
+    .input-icon {
+        width: 100%;
+    }
+
+    .alert {
+        width: 100%;
+    }
+
+    .alert.show {
+        transform: translateY(150%);
+    }
+} 
